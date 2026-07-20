@@ -2,18 +2,11 @@
 ALAMAT URL WEBSITE DAN REPOSITORI GITHUB - UAS CLOUD COMPUTING
 ========================================================================
 
-Silakan lengkapi tautan di bawah ini setelah Anda berhasil melakukan 
-push ke GitHub dan mengaktifkan GitHub Pages:
+Berikut adalah tautan untuk mengakses berkas UAS Cloud Computing:
 
 1. URL Website (GitHub Pages):
-   https://[USERNAME_GITHUB_ANDA].github.io/[NAMA_REPOSITORI_ANDA]/
-
-   Contoh: 
-   https://sastrawanwika.github.io/portfolio-uas/
+   https://baconhairboi123.github.io/UAS_CloudComputing.github.io/
 
 2. URL Repository GitHub:
-   https://github.com/[USERNAME_GITHUB_ANDA]/[NAMA_REPOSITORI_ANDA]
-
-   Contoh:
-   https://github.com/sastrawanwika/portfolio-uas
+   https://github.com/BaconHairBoi123/UAS_CloudComputing.github.io
 ========================================================================
