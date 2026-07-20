@@ -55,7 +55,7 @@ Proyek ini dibuat untuk memenuhi persyaratan Ujian Akhir Semester (UAS) mata kul
 4.  Menghasilkan materi portfolio profesional yang dapat diakses oleh publik sebagai bukti keahlian teknis.
 
 ### 1.3 Tema dan Deskripsi Proyek
-Tema yang dipilih adalah **Personal Portfolio Developer**. Website ini dirancang khusus untuk mempublikasikan profil diri, daftar keahlian (*skills*), daftar projek unggulan (termasuk proyek rental motor RideNusa), serta menyediakan formulir kontak bagi pengunjung. Halaman web ini didesain menggunakan paradigma *single-page application* dengan navigasi halus (*smooth scroll*) dan animasi transisi premium untuk kenyamanan pengguna.
+Tema yang dipilih adalah **Personal Portfolio IT Developer**. Website ini dirancang khusus untuk mempublikasikan profil diri sebagai pengembang umum (general IT developer), daftar keahlian (*skills*), daftar projek unggulan (termasuk proyek rental motor RideNusa dan projek penghijauan GoGreen Hello World), serta menyediakan formulir kontak bagi pengunjung. Halaman web ini didesain menggunakan paradigma *single-page application* dengan navigasi halus (*smooth scroll*) dan animasi transisi premium untuk kenyamanan pengguna.
 
 ---
 
@@ -95,14 +95,15 @@ Alur kerja dalam proyek ini menerapkan prinsip *GitOps*, di mana repositori Git 
 
 ### 3.1 Sistem Desain (Design Tokens)
 Website ini mengimplementasikan panduan desain modern dalam berkas `style.css` dengan parameter berikut:
-*   **Tema Warna**: Eksklusif Dark Mode untuk tampilan profesional dan nyaman di mata.
-    *   Latar Belakang: Near-black (`#0a0a0a`)
-    *   Warna Aksen: Indigo (`#6366f1`) dan Rose-Red (`#f43f5e`)
-    *   Kartu: Semi-transparan (`rgba(255, 255, 255, 0.03)`) dengan border super tipis (`rgba(255, 255, 255, 0.05)`) yang bersinar saat di-hover.
+*   **Tema Warna**: Dark Mode bernuansa hangat dengan paduan aksen emas/oranye dan gradasi warna-warni yang dinamis.
+    *   Latar Belakang: Charcoal Warm Black (`#0a0b0d`)
+    *   Warna Aksen: RideNusa Gold (`#FFB51D`) dan Deep Orange (`#ff5100`)
+    *   Elemen Animasi: Ditambahkan 3 bulatan blob latar belakang interaktif (kuning, biru, pink) yang melayang secara asinkron menggunakan CSS Keyframes `@keyframes floatBlob` untuk mencegah kebosanan visual.
+    *   Bingkai Foto: Foto profil diposisikan di dalam frame melengkung dengan bayangan tebal dan efek skew halus saat di-hover, dikelilingi lencana mengapung (*floating badges*).
 *   **Tipografi**: Menggunakan font tunggal **Inter** yang diimpor dari Google Fonts dengan ukuran teks terstruktur secara hierarkis.
 
 ### 3.2 Struktur Halaman (HTML Semantic)
-Untuk menjaga aksesibilitas (A11y) dan keramahan mesin pencari (SEO), struktur dokumen `index.html` ditulis dengan elemen semantik HTML5:
+Untuk menjaga aksesibilitas (A11y) dan kemudahan mesin pencari (SEO), struktur dokumen `index.html` ditulis dengan elemen semantik HTML5:
 *   `<nav>` untuk navigasi utama dengan tinggi tetap (h-16), dilengkapi backdrop blur.
 *   `<main>` dengan atribut ID `main-content` sebagai kontainer konten inti.
 *   `<section>` terpisah untuk setiap bagian: **Beranda**, **Profil**, **Projek** (Informasi Utama), dan **Kontak**.
@@ -139,7 +140,7 @@ Berikut adalah panduan teknis deployment website ke GitHub Pages:
     git push -u origin main
     ```
 4.  **Konfigurasi GitHub Pages**:
-    *   Masuk ke menu **Settings** pada halaman repositori GitHub Anda.
+    *   Masuk menu **Settings** pada halaman repositori GitHub Anda.
     *   Klik menu **Pages** di kolom sebelah kiri.
     *   Pada bagian *Build and deployment*, atur Source menjadi **Deploy from a branch**.
     *   Atur Branch ke **main** dan folder ke **/(root)**, lalu klik **Save**.
@@ -179,7 +180,7 @@ Dalam beberapa detik, server GitHub Actions memproses commit baru ini. Halaman w
 ### 6.1 Kesimpulan
 1.  Deployment website statis dengan GitHub Pages terbukti sangat efisien, cepat, dan mudah diimplementasikan untuk kebutuhan hosting non-database.
 2.  Integrasi erat antara Git repositori lokal dan platform cloud GitHub Pages memungkinkan otomatisasi penuh pada siklus pembaruan konten (Continuous Deployment).
-3.  Desain responsif berbasis dark mode dengan paduan warna indigo-rose memberikan pengalaman visual yang profesional dan premium bagi pengunjung.
+3.  Desain responsif berbasis dark mode dengan paduan warna emas-oranye dan floating blobs memberikan pengalaman visual yang profesional dan premium bagi pengunjung.
 
 ### 6.2 Saran
 *   Untuk pengembangan lebih lanjut, disarankan menambahkan custom domain untuk profesionalisme identitas web.
