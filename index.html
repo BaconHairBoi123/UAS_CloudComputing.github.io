@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wika | Cloud Engineer & Full-Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio statis Wika, mahasiswa Cloud Computing & Full-Stack Developer. Menyajikan projek cloud-native, desain web modern, dan otomasi infrastruktur.">
+  <meta name="keywords" content="Portfolio, Cloud Engineer, DevOps, Full-Stack Developer, Wika, GitHub Pages, Cloud Computing">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Lompat ke Konten Utama</a>
+
+  <!-- Floating Navigation Bar -->
+  <nav class="navbar" id="navbar" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="logo-link">wika.dev</a>
+      
+      <!-- Navigation Links -->
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <!-- Action badge / Status -->
+      <div class="nav-actions">
+        <div class="status-badge" aria-label="Status: Tersedia untuk proyek baru">
+          <span class="status-dot" aria-hidden="true"></span>
+          Available for Work
+        </div>
+      </div>
+
+      <!-- Hamburger Menu Button -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu" aria-controls="nav-links" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon" id="menu-icon">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon" id="close-icon" style="display:none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main id="main-content">
+
+    <!-- HERO SECTION (BERANDA) -->
+    <section class="hero" id="home" aria-label="Hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-label">
+            <div class="status-badge">
+              <span class="status-dot" aria-hidden="true"></span>
+              Cloud Computing Specialist
+            </div>
+          </div>
+          <h1 class="hero-title">
+            Design. Deploy.<br>
+            <span class="text-gradient">Scale.</span>
+          </h1>
+          <p class="hero-desc">
+            Halo! Saya Wika. I am a tech student focusing on cloud engineering, automated CI/CD pipelines, and crafting clean full-stack web applications.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              Explore Projects
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              Contact Me
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- IDE-Style Interactive Code Terminal Display -->
+        <div class="hero-visual">
+          <div class="terminal-widget" aria-label="Mock Code Display">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span class="t-btn close"></span>
+                <span class="t-btn minimize"></span>
+                <span class="t-btn expand"></span>
+              </div>
+              <span class="terminal-title">profile.json</span>
+            </div>
+            <div class="terminal-body">
+              <span class="terminal-line"><span class="t-comment">// Personal profiles & cloud stack</span></span>
+              <span class="terminal-line">{</span>
+              <span class="terminal-line">&nbsp;&nbsp;<span class="t-key">"name"</span>: <span class="t-string">"Wika"</span>,</span>
+              <span class="terminal-line">&nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-string">"Cloud Computing Engineer"</span>,</span>
+              <span class="terminal-line">&nbsp;&nbsp;<span class="t-key">"academic"</span>: <span class="t-string">"Teknologi Informasi, Semester 4"</span>,</span>
+              <span class="terminal-line">&nbsp;&nbsp;<span class="t-key">"hosting"</span>: <span class="t-string">"GitHub Pages"</span>,</span>
+              <span class="terminal-line">&nbsp;&nbsp;<span class="t-key">"skills"</span>: [</span>
+              <span class="terminal-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-string">"AWS"</span>, <span class="t-string">"GCP"</span>, <span class="t-string">"CI/CD Pipeline"</span>,</span>
+              <span class="terminal-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-string">"Laravel"</span>, <span class="t-string">"Docker"</span>, <span class="t-string">"TailwindCSS"</span></span>
+              <span class="terminal-line">&nbsp;&nbsp;],</span>
+              <span class="terminal-line">&nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-bool">true</span></span>
+              <span class="terminal-line">}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE SECTION (PROFIL) -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <span class="section-label">Profile / Profil</span>
+        <h2 id="about-title">About Me / Tentang Saya</h2>
+        
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Saya adalah mahasiswa <strong>Teknologi Informasi / Ilmu Komputer (Semester 4)</strong> yang memiliki ketertarikan mendalam dalam arsitektur sistem berbasis awan (Cloud Computing) dan pemrograman web modern.
+            </p>
+            <p>
+              My primary focus is bridging application code with scalable cloud infrastructures. I enjoy working on modern concepts like Infrastructure as Code (IaC), containerization, and serverless architectures.
+            </p>
+            <p>
+              Tujuan saya adalah membangun ekosistem digital yang efisien, menggabungkan praktik terbaik DevOps dengan antarmuka web yang memukau secara estetika dan mudah diakses oleh semua pengguna.
+            </p>
+          </div>
+          
+          <div class="skills-container">
+            <!-- Skill Category 1 -->
+            <div class="skills-category">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Cloud & DevOps
+              </h4>
+              <div class="skills-list">
+                <span class="tag">AWS</span>
+                <span class="tag">Google Cloud (GCP)</span>
+                <span class="tag">GitHub Actions (CI/CD)</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Linux System</span>
+                <span class="tag">GitHub Pages</span>
+              </div>
+            </div>
+
+            <!-- Skill Category 2 -->
+            <div class="skills-category">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                Web Development
+              </h4>
+              <div class="skills-list">
+                <span class="tag">HTML5 & CSS3</span>
+                <span class="tag">JavaScript (ES6+)</span>
+                <span class="tag">Laravel (PHP)</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Tailwind CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (INFORMASI UTAMA) -->
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="projects-header">
+          <span class="section-label">Featured Works / Projek</span>
+          <h2 id="projects-title">Highlight Projects</h2>
+          <p class="projects-intro">Kompilasi beberapa projek pengembangan software dan integrasi cloud computing yang telah saya kerjakan.</p>
+        </div>
+
+        <div class="card-grid">
+          <!-- Project 1 -->
+          <article class="card">
+            <div class="card-preview">
+              <img src="assets/images/project_ridenusa.png" alt="RideNusa Rental Motor Mockup Preview">
+            </div>
+            <div class="card-body">
+              <div class="project-meta">
+                <span>Web Application</span>
+                <span>•</span>
+                <span>Laravel Framework</span>
+              </div>
+              <h3 class="card-title">RideNusa: Rental Motor</h3>
+              <p class="card-text">
+                Platform sewa motor berbasis web yang menggunakan framework Laravel. Mendukung pencarian ketersediaan unit motor secara real-time, autentikasi pelanggan, dan pelacakan transaksi sewa secara terpusat.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tags">
+                <span class="tag">Laravel</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Tailwind</span>
+              </div>
+              <div class="card-arrow-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card">
+            <div class="card-preview">
+              <img src="assets/images/project_cicd.png" alt="Cloud-Native Delivery Pipeline Mockup Preview">
+            </div>
+            <div class="card-body">
+              <div class="project-meta">
+                <span>DevOps / Cloud</span>
+                <span>•</span>
+                <span>CI/CD Workflow</span>
+              </div>
+              <h3 class="card-title">Cloud-Native CI/CD</h3>
+              <p class="card-text">
+                Automated deployment pipeline yang mengintegrasikan pengujian unit otomatis dan static analysis menggunakan GitHub Actions. Deployment dilakukan secara otomatis ke CDN hosting berbasis AWS S3 / CloudFront.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tags">
+                <span class="tag">GitHub Actions</span>
+                <span class="tag">AWS S3</span>
+                <span class="tag">CloudFront</span>
+              </div>
+              <div class="card-arrow-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card">
+            <div class="card-preview">
+              <img src="assets/images/project_analytics.png" alt="Serverless Visitor Analytics Mockup Preview">
+            </div>
+            <div class="card-body">
+              <div class="project-meta">
+                <span>Serverless / Backend</span>
+                <span>•</span>
+                <span>Realtime Analytics</span>
+              </div>
+              <h3 class="card-title">Serverless Visitor Analytics</h3>
+              <p class="card-text">
+                Sistem analitik pengunjung website yang ringan menggunakan arsitektur serverless Google Cloud Functions. Data kunjungan dicatat secara asinkron ke database Cloud Firestore untuk visualisasi statistik.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tags">
+                <span class="tag">GCP Functions</span>
+                <span class="tag">Firestore</span>
+                <span class="tag">Node.js</span>
+              </div>
+              <div class="card-arrow-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (KONTAK) -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <span class="section-label">Contact / Kontak</span>
+        <h2 id="contact-title">Let's Collaborate</h2>
+        
+        <div class="contact-grid">
+          <!-- Info Details -->
+          <div class="contact-info">
+            <p class="lead">
+              Ada ide projek yang ingin didiskusikan atau memiliki pertanyaan terkait Cloud & Web Development? Silakan kirimkan pesan melalui formulir kontak atau hubungi saya langsung.
+            </p>
+            
+            <div class="contact-details">
+              <!-- Email -->
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:sastrawanwika@gmail.com" class="contact-value">sastrawanwika@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-label">Location / Lokasi</span>
+                  <span class="contact-value">Indonesia</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media Handles -->
+            <div class="social-links">
+              <a href="https://github.com/sastrawanwika" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form Container -->
+          <div class="contact-form-container">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="form-name" class="form-label">Nama Lengkap / Full Name</label>
+                <input type="text" id="form-name" class="form-control" placeholder="Nama Anda" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email" class="form-label">Alamat Email / Email Address</label>
+                <input type="email" id="form-email" class="form-control" placeholder="email@contoh.com" required>
+              </div>
+              <div class="form-group">
+                <label for="form-message" class="form-label">Pesan / Message</label>
+                <textarea id="form-message" class="form-control" placeholder="Tulis pesan Anda di sini..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-submit">
+                Send Message
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p class="footer-text">&copy; 2026 wika.dev. Dibuat untuk UAS Cloud Computing.</p>
+      <div class="footer-links">
+        <a href="#home" class="footer-link">Home</a>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Submission Success Modal Overlay -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <div class="modal-icon-container">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h3 class="modal-title" id="modal-title">Pesan Terkirim!</h3>
+      <p class="modal-desc">
+        Terima kasih telah menghubungi saya. Pesan Anda telah disimulasikan dan berhasil diterima. Saya akan segera merespons via email.
+      </p>
+      <button class="btn btn-primary" id="modal-close" style="width: 100%;">Tutup</button>
+    </div>
+  </div>
+
+  <!-- Custom Tracking Cursor Elements -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- JavaScript Behavior -->
+  <script src="script.js"></script>
+</body>
+</html>

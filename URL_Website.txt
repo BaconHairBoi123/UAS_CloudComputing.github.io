@@ -1,0 +1,19 @@
+========================================================================
+ALAMAT URL WEBSITE DAN REPOSITORI GITHUB - UAS CLOUD COMPUTING
+========================================================================
+
+Silakan lengkapi tautan di bawah ini setelah Anda berhasil melakukan 
+push ke GitHub dan mengaktifkan GitHub Pages:
+
+1. URL Website (GitHub Pages):
+   https://[USERNAME_GITHUB_ANDA].github.io/[NAMA_REPOSITORI_ANDA]/
+
+   Contoh: 
+   https://sastrawanwika.github.io/portfolio-uas/
+
+2. URL Repository GitHub:
+   https://github.com/[USERNAME_GITHUB_ANDA]/[NAMA_REPOSITORI_ANDA]
+
+   Contoh:
+   https://github.com/sastrawanwika/portfolio-uas
+========================================================================

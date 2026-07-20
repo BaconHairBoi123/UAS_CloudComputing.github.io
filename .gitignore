@@ -1,0 +1,11 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Developer/System directories
+.gemini/
+.vscode/
+
+# Local node packages
+node_modules/
+package-lock.json
