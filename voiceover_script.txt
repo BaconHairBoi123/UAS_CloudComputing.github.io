@@ -13,50 +13,51 @@ Perkenalkan, nama saya Wika. Pada kesempatan kali ini, saya ingin mendemonstrasi
 
 Tugas ini mewajibkan pembuatan sebuah website statis sederhana dan melakukan deployment ke layanan cloud gratis. Di sini, saya membangun sebuah website personal portfolio interaktif menggunakan HTML, CSS murni, dan JavaScript untuk interaksinya. 
 
-Saat ini, kita berada di halaman utama atau Beranda. Desain website ini menggunakan tema modern dark-mode dengan warna aksen Indigo dan gradasi Rose-Red sesuai dengan panduan desain modern. Di halaman utama ini, terdapat logo personal 'wika.dev', navigasi utama, lencana 'Available for Work' dengan animasi pulsing hijau yang dinamis, serta ringkasan tentang profil saya. Terdapat pula tombol aksi 'Lihat Projek' dan 'Hubungi Saya'."
+Saat ini, kita berada di halaman utama atau Beranda. Desain website ini menggunakan tema modern dark-mode dengan skema warna kosmik—menggunakan gradasi Biru Neon, Indigo, dan Ungu Gelap sesuai dengan tren desain premium saat ini. Halaman utama ini menampilkan logo personal 'wika.dev', menu navigasi melayang (floating pill), ringkasan profil saya, serta tombol interaktif untuk eksplorasi projek dan kontak. Logo 'wika.dev' ini juga interaktif: jika diklik sekali, ia akan memutar logo dan meluncurkan roket 🚀; sedangkan jika diklik dua kali, ia memicu kilatan supernova yang mendemonstrasikan efek warp kecepatan cahaya pada latar belakang bintang."
 
 
 [BAGIAN 2: PROFIL & KATEGORI SKILLS - Durasi: 1:00 - 2:00]
 ------------------------------------------------------------------------
-(Visual: Scroll ke bawah ke bagian "Profil / Tentang Saya")
+(Visual: Scroll ke bawah ke bagian "Profil / Tentang Saya" dan "My Skills")
 
-"Selanjutnya, mari kita masuk ke bagian Profil atau Tentang Saya. 
+"Selanjutnya, mari kita masuk ke bagian Tentang Saya. 
 
-Di bagian ini, saya menjelaskan secara singkat latar belakang akademik saya sebagai mahasiswa semester empat yang memiliki ketertarikan mendalam dalam arsitektur cloud computing dan full-stack development. 
+Di bagian kiri, saya menjelaskan secara singkat latar belakang akademik saya sebagai mahasiswa semester empat yang mendalami pemrograman dan teknologi cloud. 
 
-Di sebelah kanan, terdapat pembagian keahlian atau skills yang dikelompokkan secara terstruktur. Pertama ada kategori 'Cloud & DevOps' yang mencakup AWS, Google Cloud Platform, GitHub Actions, Docker, Linux, dan GitHub Pages. Kedua ada kategori 'Web Development' yang meliputi HTML5, CSS3, JavaScript, Laravel PHP, Node.js, MySQL, dan Tailwind CSS. Komponen tag ini dibuat responsif dan memiliki transisi hover yang halus."
+Di bagian kanan, terdapat daftar keahlian atau 'My Skills' yang mencakup teknologi React.js, CSS, JavaScript, HTML, MySQL, Java, Tailwind CSS, Flutter, Laravel, Node.js, AWS, GCP, Docker, Linux, dan GitHub Actions. Layout daftar keahlian ini didesain secara kompak dalam 6 kolom pada perangkat desktop agar seluruh skill dapat langsung terlihat dalam sekali pandang tanpa memerlukan scroll panjang."
 
 
-[BAGIAN 3: INFORMASI UTAMA / PROJEK UNGGULAN - Durasi: 2:00 - 3:15]
+[BAGIAN 3: PROJEK UNGGULAN & PAGINASI - Durasi: 2:00 - 3:30]
 ------------------------------------------------------------------------
-(Visual: Scroll ke bagian "Projek Unggulan")
+(Visual: Scroll ke bagian "Highlight Projects", tunjukkan 4 projek di Halaman 1, lalu klik halaman 2 untuk menunjukkan Projek 5)
 
-"Sekarang kita bergeser ke Informasi Utama, yaitu bagian Projek Unggulan.
+"Sekarang kita berpindah ke bagian Projek Unggulan.
 
-Di bagian ini, saya menampilkan tiga buah kartu projek yang merepresentasikan eksplorasi teknis saya:
-1. Pertama ada projek 'RideNusa', sebuah aplikasi penyewaan sepeda motor berbasis Laravel dan MySQL.
-2. Kedua ada 'Cloud-Native Delivery', sebuah otomasi pipeline CI/CD yang men-deploy file web statis secara otomatis ke AWS S3 dan CloudFront.
-3. Dan ketiga ada projek 'Serverless Visitor Analytics', sistem pemantau kunjungan menggunakan Google Cloud Functions dan Google Cloud Firestore.
+Karena terdapat lebih dari 4 projek, saya telah mengimplementasikan sistem paginasi dinamis berbasis JavaScript. Di halaman pertama, terdapat 4 kartu projek unggulan:
+1. Pertama ada 'RideNusa Web', platform rental motor berbasis Laravel dan MySQL.
+2. Kedua ada 'Hello World', web bertema penghijauan edukatif menggunakan HTML, CSS, dan JavaScript.
+3. Ketiga ada 'RideNusa Mobile', aplikasi mobile berbasis Flutter, Dart, dan REST API.
+4. Keempat ada 'KRS Universitas Touhou Indonesia', portal kartu rencana studi interaktif dengan Next.js 14, raw PHP backend, dan MySQL.
 
-Setiap kartu projek didesain interaktif dengan border glow indigo tipis ketika kursor diarahkan, memberikan feedback visual yang premium kepada pengunjung."
+Setiap kartu didesain dengan efek hover interaktif dan scrolling gambar pratinjau yang halus. Jika kita mengklik tombol halaman '2' pada navigasi paginasi di bagian bawah, sistem akan beralih secara mulus dan menampilkan projek kelima, yaitu placeholder 'Coming Soon' untuk projek masa depan."
 
 
-[BAGIAN 4: KONTAK & FITUR INTERAKTIF FORM - Durasi: 3:15 - 4:00]
+[BAGIAN 4: KONTAK & FITUR INTERAKTIF FORM - Durasi: 3:30 - 4:15]
 ------------------------------------------------------------------------
-(Visual: Scroll ke bagian "Hubungi Kami" / Kontak, isi form secara cepat, lalu klik submit)
+(Visual: Scroll ke bagian "Contact", simulasikan pengisian form secara cepat, lalu klik submit)
 
-"Bagian terakhir adalah Kontak. Halaman ini berisi informasi email personal, lokasi, serta tautan ke profil GitHub dan LinkedIn saya. 
+"Bagian berikutnya adalah Kontak. Halaman ini memuat email personal serta tautan media sosial seperti GitHub dan LinkedIn. 
 
-Terdapat juga formulir interaktif di mana pengunjung dapat mengirim pesan. Mari kita simulasikan pengisian nama, email, dan isi pesan. Ketika saya menekan tombol 'Kirim Pesan', script JavaScript akan memvalidasi input secara lokal dan memunculkan pop-up modal sukses kustom yang sangat mulus tanpa memuat ulang (reload) halaman keseluruhan."
+Terdapat juga formulir interaktif di mana pengunjung dapat mengirim pesan. Mari kita simulasikan pengisian formulir ini. Ketika tombol 'Kirim Pesan' ditekan, JavaScript akan memvalidasi input secara lokal dan memunculkan pop-up modal sukses kustom yang dinamis tanpa memuat ulang (reload) halaman, menjaga pengalaman pengguna tetap mulus."
 
 
-[BAGIAN 5: PENJELASAN DEPLOYMENT & PEMBARUAN (CLOUD) - Durasi: 4:00 - 5:00]
+[BAGIAN 5: PENJELASAN DEPLOYMENT & CD (CLOUD) - Durasi: 4:15 - 5:00]
 ------------------------------------------------------------------------
-(Visual: Tunjukkan repository GitHub, tab Settings Pages, dan perbandingan perubahan/update live)
+(Visual: Tunjukkan repository GitHub, tab Settings Pages, dan website live)
 
-"Untuk aspek Cloud Computing dari proyek ini, seluruh source code telah saya unggah ke repository GitHub publik di github.com/sastrawanwika. Deployment dilakukan secara penuh menggunakan layanan gratis GitHub Pages yang meng-host file statis langsung dari branch utama (main).
+"Seluruh kode sumber proyek ini disimpan dalam repositori GitHub dan di-deploy secara otomatis ke URL publik menggunakan layanan cloud gratis GitHub Pages. 
 
-Sesuai dengan ketentuan ujian, saya juga telah melakukan pembaruan (update) terhadap website ini setelah deployment pertama berhasil. Saya menambahkan sub-kategori skill/projek baru, meng-commit perubahan, dan melakukan push kembali. Dalam hitungan detik, server GitHub Pages memicu build baru dan menampilkan pembaruan tersebut secara instan di URL publik. Hal ini mendemonstrasikan konsep dasar Continuous Deployment dalam siklus pengembangan software berbasis cloud.
+Sebagai pemenuhan kriteria Continuous Deployment, pembaruan konten seperti penambahan paginasi projek dan kartu projek baru langsung di-push ke branch utama. GitHub Pages secara otomatis memicu proses build ulang dan memperbarui website publik dalam hitungan detik.
 
-Demikian presentasi dan demonstrasi proyek UAS Cloud Computing ini. Semoga dapat memenuhi seluruh kriteria penilaian dengan baik. Terima kasih atas perhatiannya, dan sampai jumpa."
+Sekian demonstrasi proyek UAS Cloud Computing ini. Semoga dapat memenuhi seluruh kriteria penilaian dengan baik. Terima kasih atas perhatiannya."
 ========================================================================

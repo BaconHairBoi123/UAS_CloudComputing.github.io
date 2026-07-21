@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wika | Full-Stack Web Developer & IT Professional Portfolio</title>
-  <meta name="description" content="Portfolio Wika, mahasiswa Teknologi Informasi & Full-Stack Web Developer. Menyajikan projek aplikasi web, sistem informasi, dan integrasi teknologi.">
+  <meta name="description" content="Wika's portfolio as an Information Technology student and Full-Stack Web Developer, featuring web applications, information systems, and technology integrations.">
   <meta name="keywords" content="Portfolio, Full-Stack Developer, Web Developer, Programmer, Wika, GitHub Pages, IT Developer">
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="stars-wrapper" aria-hidden="true">
+    <div class="stars"></div>
+  </div>
 
   <!-- Background Decorative Blur Blobs -->
   <div class="blob blob-1" aria-hidden="true"></div>
@@ -18,7 +21,7 @@
   <div class="blob blob-3" aria-hidden="true"></div>
 
   <!-- Accessibility Skip Link -->
-  <a href="#main-content" class="skip-link">Lompat ke Konten Utama</a>
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
   <!-- Floating Navigation Bar -->
   <nav class="navbar" id="navbar" aria-label="Main Navigation">
@@ -29,16 +32,9 @@
       <div class="nav-links" id="nav-links">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
-      </div>
-
-      <!-- Action badge / Status -->
-      <div class="nav-actions">
-        <div class="status-badge" aria-label="Status: Tersedia untuk proyek baru">
-          <span class="status-dot" aria-hidden="true"></span>
-          Available for Work
-        </div>
       </div>
 
       <!-- Hamburger Menu Button -->
@@ -59,24 +55,24 @@
   <!-- Main Content Area -->
   <main id="main-content">
 
-    <!-- HERO SECTION (BERANDA) -->
+    <!-- HERO SECTION -->
     <section class="hero" id="home" aria-label="Hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="hero-label">
+          <div class="hero-label hero-animate-1">
             <div class="status-badge">
               <span class="status-dot" aria-hidden="true"></span>
               Full-Stack Web Developer
             </div>
           </div>
-          <h1 class="hero-title">
+          <h1 class="hero-title hero-animate-2">
             Build. Solve.<br>
             <span class="text-gradient">Innovate.</span>
           </h1>
-          <p class="hero-desc">
-            Halo! Saya Wika. I am a Full-Stack Web Developer and IT student specializing in designing robust software, dynamic web interfaces, and automated workflows.
+          <p class="hero-desc hero-animate-3">
+            Hi! I am Wika, a Full-Stack Web Developer and IT student specializing in robust software, dynamic web interfaces, and automated workflows.
           </p>
-          <div class="hero-buttons">
+          <div class="hero-buttons hero-animate-4">
             <a href="#projects" class="btn btn-primary">
               Explore Projects
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -95,11 +91,11 @@
         </div>
         
         <!-- Animated Photo Frame Visual Display -->
-        <div class="hero-visual">
+        <div class="hero-visual hero-animate-visual">
           <div class="photo-frame-container">
             <div class="photo-glow-effect"></div>
             <div class="photo-frame">
-              <img src="assets/images/wika_photo.jpg" alt="Foto Wika">
+              <img src="assets/images/photo.webp" alt="Wika portrait">
             </div>
             
             <!-- Animated Floating Badge 1 -->
@@ -111,33 +107,33 @@
             <!-- Animated Floating Badge 2 -->
             <div class="floating-badge badge-2">
               <span class="badge-icon">🚀</span>
-              <span>Semester 4</span>
+              <span>Fourth Semester</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROFILE SECTION (PROFIL) -->
+    <!-- PROFILE SECTION -->
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="container">
-        <span class="section-label">Profile / Profil</span>
-        <h2 id="about-title">About Me / Tentang Saya</h2>
+        <span class="section-label reveal">Profile</span>
+        <h2 id="about-title" class="reveal">About Me</h2>
         
         <div class="about-grid">
-          <div class="about-text">
+          <div class="about-text reveal-left">
             <p>
-              Saya adalah mahasiswa <strong>Teknologi Informasi</strong> yang memiliki ketertarikan mendalam dalam pemrograman web modern, pengembangan perangkat lunak, dan desain sistem terdistribusi.
+              I am an <strong>Information Technology</strong> student with a strong interest in modern web programming, software development, and distributed system design.
             </p>
             <p>
               As a general IT Developer, I work across the stack, leveraging frameworks like ReactJS and Laravel to build clean user interfaces backed by stable databases. I enjoy solving logical puzzles and translating business requirements into scalable code.
             </p>
             <p>
-              Tujuan saya adalah membangun ekosistem digital yang efisien, berestetika tinggi, dan memberikan solusi nyata bagi pengguna akhir melalui integrasi teknologi yang tepat guna.
+              My goal is to build efficient, polished digital ecosystems that deliver practical solutions for end users through thoughtful technology integration.
             </p>
           </div>
           
-          <div class="about-stats-summary">
+          <div class="about-stats-summary reveal-right">
             <div class="stat-box">
               <span class="stat-number">4+</span>
               <span class="stat-label">Semesters Completed</span>
@@ -148,15 +144,20 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- SKILLS SECTION GRID (MATCHING THE SCREENSHOT DESIGN CONCEPT) -->
+    <!-- SKILLS SECTION -->
+    <section class="skills-section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <!-- SKILLS SECTION GRID -->
         <div class="skills-section-wrapper">
-          <span class="section-label text-center">Tech Stack</span>
-          <h3 class="skills-heading-center">My Skills</h3>
+          <span class="section-label text-center reveal">Tech Stack</span>
+          <h3 class="skills-heading-center reveal">My Skills</h3>
           
           <div class="skill-grid">
             <!-- ReactJS -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-1">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#61dafb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="2"></circle>
@@ -169,7 +170,7 @@
             </div>
 
             <!-- CSS -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-2">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#1572b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 2l1.5 17L12 22l5.5-3L19 2H5z"></path>
@@ -180,7 +181,7 @@
             </div>
 
             <!-- JavaScript -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-3">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#f7df1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="3" width="18" height="18" rx="2"></rect>
@@ -191,7 +192,7 @@
             </div>
 
             <!-- HTML -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-4">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#e34f26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 2l1.5 17L12 22l5.5-3L19 2H5z"></path>
@@ -202,7 +203,7 @@
             </div>
 
             <!-- MySQL -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-5">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#00758f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
@@ -214,7 +215,7 @@
             </div>
 
             <!-- Java -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-6">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#f89820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 18c0 1 3 2 6 2s6-1 6-2M4 14c0 1.5 4 2.5 8 2.5s8-1 8-2.5"></path>
@@ -226,7 +227,7 @@
             </div>
 
             <!-- Tailwind CSS -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-7">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 3c-1.2 0-2.4.6-3 1.5-1.2 1.8-1.2 4.2 0 6 .6.9 1.8 1.5 3 1.5s2.4-.6 3-1.5c1.2-1.8 1.2-4.2 0-6-.6-.9-1.8-1.5-3-1.5z"></path>
@@ -237,7 +238,7 @@
             </div>
 
             <!-- Flutter -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-8">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="#02569B">
                   <path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/>
@@ -247,7 +248,7 @@
             </div>
 
             <!-- Laravel -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-1">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#ff2d20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -257,7 +258,7 @@
             </div>
 
             <!-- Node.js -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-2">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#339933" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 2L3 7v10l9 5 9-5V7l-9-5z"></path>
@@ -270,19 +271,26 @@
             </div>
 
             <!-- AWS -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-3">
               <div class="skill-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 17.58A8.5 8.5 0 0 1 5.4 12.3c0-4.6 3.7-8.3 8.3-8.3a8.3 8.3 0 0 1 7.2 4.2"></path>
-                  <path d="M6 16c2 2 5.5 3 8.5 3 2.5 0 5-.7 7-2"></path>
-                  <path d="M19 14l3 3-3 3"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 333334 199332" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+                  <defs>
+                    <style>.fil1{fill:#f90}</style>
+                  </defs>
+                  <g id="Layer_x0020_1">
+                    <g id="amazon-web-services-2.svg">
+                      <path d="M93937 72393c0 4102 443 7428 1219 9867 887 2439 1996 5100 3548 7982 554 887 776 1774 776 2550 0 1109-665 2217-2106 3326l-6985 4656c-998 665-1995 998-2882 998-1109 0-2217-554-3326-1552-1552-1663-2882-3437-3991-5211-1109-1885-2217-3991-3437-6541-8648 10200-19512 15299-32594 15299-9312 0-16740-2661-22172-7982-5432-5322-8204-12417-8204-21286 0-9424 3326-17073 10089-22838s15743-8647 27161-8647c3769 0 7650 332 11752 887 4102 554 8315 1441 12749 2439v-8093c0-8426-1774-14301-5211-17738-3548-3437-9534-5100-18071-5100-3880 0-7871 443-11973 1441s-8093 2217-11973 3769c-1774 776-3104 1219-3880 1441s-1330 332-1774 332c-1552 0-2328-1109-2328-3437v-5432c0-1774 222-3104 776-3880s1552-1552 3104-2328c3880-1996 8537-3659 13969-4989C43606 885 49370 220 55468 220c13193 0 22838 2993 29046 8980 6098 5987 9202 15077 9202 27272v35920h222zM48926 89244c3659 0 7428-665 11419-1995s7539-3769 10532-7095c1774-2106 3104-4435 3770-7095 665-2661 1108-5876 1108-9645v-4656c-3215-776-6652-1441-10199-1885-3548-443-6984-665-10421-665-7428 0-12860 1441-16519 4435-3659 2993-5432 7206-5432 12749 0 5211 1330 9091 4102 11751 2661 2772 6541 4102 11641 4102zm89023 11973c-1996 0-3326-332-4213-1109-887-665-1663-2217-2328-4324l-26053-85697c-665-2217-998-3658-998-4434 0-1774 887-2772 2661-2772h10865c2106 0 3548 333 4324 1109 887 665 1552 2217 2217 4324l18625 73391 17295-73391c554-2217 1219-3659 2106-4324s2439-1109 4435-1109h8869c2106 0 3548 333 4435 1109 887 665 1663 2217 2106 4324l17516 74278 19180-74278c665-2217 1441-3659 2217-4324 887-665 2328-1109 4324-1109h10310c1774 0 2772 887 2772 2772 0 554-111 1109-222 1774s-333 1552-776 2772l-26718 85697c-665 2217-1441 3658-2328 4324-887 665-2328 1109-4213 1109h-9534c-2107 0-3548-333-4435-1109s-1663-2217-2106-4435l-17184-71507-17073 71396c-554 2217-1220 3658-2107 4434s-2439 1109-4434 1109h-9534zm142459 2993c-5765 0-11530-665-17073-1995s-9867-2772-12749-4435c-1774-998-2993-2106-3437-3104-443-998-665-2106-665-3104v-5654c0-2328 887-3437 2550-3437 665 0 1330 111 1995 333s1663 665 2772 1109c3769 1663 7871 2993 12195 3880 4435 887 8758 1330 13193 1330 6984 0 12417-1220 16186-3659s5765-5987 5765-10532c0-3104-998-5654-2993-7760-1996-2107-5765-3991-11197-5765l-16075-4989c-8093-2550-14080-6319-17738-11308-3658-4878-5543-10310-5543-16075 0-4656 998-8758 2993-12306s4656-6652 7982-9091c3326-2550 7095-4434 11530-5765S279190-2 284068-2c2439 0 4989 111 7428 443 2550 333 4878 776 7206 1219 2217 554 4324 1109 6319 1774s3548 1330 4656 1996c1552 887 2661 1774 3326 2771 665 887 998 2107 998 3659v5211c0 2328-887 3548-2550 3548-887 0-2328-444-4213-1331-6319-2882-13415-4324-21286-4324-6319 0-11308 998-14745 3104s-5211 5321-5211 9867c0 3104 1109 5765 3326 7871s6319 4213 12195 6097l15743 4989c7982 2550 13747 6098 17184 10643s5100 9756 5100 15521c0 4767-998 9091-2882 12860-1996 3770-4656 7095-8093 9756-3437 2771-7539 4767-12306 6208-4989 1552-10199 2328-15854 2328z" fill="#252f3e"/>
+                      <path class="fil1" d="M301362 158091c-36474 26940-89467 41241-135031 41241-63858 0-121395-23614-164854-62859-3437-3104-332-7317 3770-4878 47006 27272 104988 43791 164964 43791 40465 0 84921-8426 125830-25721 6097-2772 11308 3991 5321 8426z"/>
+                      <path class="fil1" d="M316550 140796c-4656-5987-30820-2883-42682-1441-3548 443-4102-2661-887-4989 20842-14634 55099-10421 59090-5543 3991 4989-1109 39246-20620 55653-2993 2550-5876 1220-4545-2106 4435-10976 14301-35698 9645-41574z"/>
+                    </g>
+                  </g>
                 </svg>
               </div>
               <span class="skill-name">AWS</span>
             </div>
 
             <!-- GCP -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-4">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
@@ -294,7 +302,7 @@
             </div>
 
             <!-- Docker -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-5">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#2496ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="4" y="6" width="3" height="3" rx="0.5"></rect>
@@ -309,7 +317,7 @@
             </div>
 
             <!-- Git & GitHub -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-6">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#f05032" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="18" cy="18" r="3"></circle>
@@ -324,7 +332,7 @@
 
 
             <!-- Canva -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-7">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="#00c4cc">
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zM6.962 7.68c.754 0 1.337.549 1.405 1.2.069.583-.171 1.097-.822 1.406-.343.171-.48.172-.549.069-.034-.069 0-.137.069-.206.617-.514.617-.926.548-1.508-.034-.378-.308-.618-.583-.618-1.2 0-2.914 2.674-2.674 4.629.103.754.549 1.646 1.509 1.646.308 0 .65-.103.96-.24.5-.264.799-.47 1.097-.8-.073-.885.704-2.046 1.851-2.046.515 0 .926.205.96.583.068.514-.377.582-.514.582s-.378-.034-.378-.17c-.034-.138.309-.07.275-.378-.035-.206-.24-.274-.446-.274-.72 0-1.131.994-1.029 1.611.035.275.172.549.447.549.205 0 .514-.31.617-.755.068-.308.343-.514.583-.514.102 0 .17.034.205.171v.138c-.034.137-.137.548-.102.651 0 .069.034.171.17.171.092 0 .436-.18.777-.459.117-.59.253-1.298.253-1.357.034-.24.137-.48.617-.48.103 0 .171.034.205.171v.138l-.136.617c.445-.583 1.097-.994 1.508-.994.172 0 .309.102.309.274 0 .103 0 .274-.069.446-.137.377-.309.96-.412 1.474 0 .137.035.274.207.274.171 0 .685-.206 1.096-.754l.007-.004c-.002-.068-.007-.134-.007-.202 0-.411.035-.754.104-.994.068-.274.411-.514.617-.514.103 0 .205.069.205.171 0 .035 0 .103-.034.137-.137.446-.24.857-.24 1.269 0 .24.034.582.102.788 0 .034.035.069.07.069.068 0 .548-.445.89-1.028-.308-.206-.48-.549-.48-.96 0-.72.446-1.097.858-1.097.343 0 .617.24.617.72 0 .308-.103.65-.274.96h.102a.77.77 0 0 0 .584-.24.293.293 0 0 1 .134-.117c.335-.425.83-.74 1.41-.74.48 0 .924.205.959.582.068.515-.378.618-.515.618l-.002-.002c-.138 0-.377-.035-.377-.172 0-.137.309-.068.274-.376-.034-.206-.24-.275-.446-.275-.686 0-1.13.891-1.028 1.611.034.275.171.583.445.583.206 0 .515-.308.652-.754.068-.274.343-.514.583-.514.103 0 .17.034.205.171 0 .069 0 .206-.137.652-.17.308-.171.48-.137.617.034.274.171.48.309.583.034.034.068.102.068.102 0 .069-.034.138-.137.138-.034 0-.068 0-.103-.035-.514-.205-.72-.548-.789-.891-.205.24-.445.377-.72.377-.445 0-.89-.411-.96-.926a1.609 1.609 0 0 1 .075-.649c-.203.13-.422.203-.623.203h-.17c-.447.652-.927 1.098-1.27 1.303a.896.896 0 0 1-.377.104c-.068 0-.171-.035-.205-.104-.095-.152-.156-.392-.193-.667-.481.527-1.145.805-1.453.805-.343 0-.548-.206-.582-.55v-.376c.102-.754.377-1.2.377-1.337a.074.074 0 0 0-.069-.07c-.24 0-1.028.824-1.166 1.373l-.103.445c-.068.309-.377.515-.582.515-.103 0-.172-.035-.206-.172v-.137l.046-.233c-.435.31-.87.508-1.075.508-.308 0-.48-.172-.514-.412-.206.274-.445.412-.754.412-.352 0-.696-.24-.862-.593-.244.275-.523.553-.852.764-.48.309-1.028.549-1.68.549-.582 0-1.097-.309-1.371-.583-.412-.377-.651-.96-.686-1.509-.205-1.68.823-3.84 2.4-4.8.378-.205.755-.343 1.132-.343zm9.77 3.291c-.104 0-.172.172-.172.343 0 .274.137.583.309.755a1.74 1.74 0 0 0 .102-.583c0-.343-.137-.515-.24-.515z"/>
@@ -333,7 +341,7 @@
               <span class="skill-name">Canva</span>
             </div>
             <!-- Filmora -->
-            <div class="skill-card">
+            <div class="skill-card reveal stagger-8">
               <div class="skill-icon" aria-hidden="true">
                 <svg viewBox="0 0 122.88 122.88">
                   <path fill="#1c3a4e" fill-rule="evenodd" d="M28.08,0H94.8a28.17,28.17,0,0,1,28.08,28.08V94.8A28.17,28.17,0,0,1,94.8,122.88H28.08A28.17,28.17,0,0,1,0,94.8V28.08A28.17,28.17,0,0,1,28.08,0Z"/>
@@ -348,30 +356,30 @@
       </div>
     </section>
 
-    <!-- PROJECTS SECTION (INFORMASI UTAMA) -->
+    <!-- PROJECTS SECTION -->
     <section class="projects" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <div class="projects-header">
-          <span class="section-label">Featured Works / Projek</span>
-          <h2 id="projects-title">Highlight Projects</h2>
-          <p class="projects-intro">Kompilasi beberapa projek pengembangan software, web application, dan aplikasi informatik yang telah saya kerjakan.</p>
+          <span class="section-label reveal">Featured Works</span>
+          <h2 id="projects-title" class="reveal">Highlight Projects</h2>
+          <p class="projects-intro reveal">A curated selection of software development projects, web applications, and information technology applications I have built.</p>
         </div>
 
         <div class="card-grid">
           <!-- Project 1 -->
-          <article class="card">
+          <article class="card reveal stagger-1" data-page="1">
             <div class="card-preview">
-              <img src="assets/images/ridenusa_1.png" style="object-position: center 25%;" alt="RideNusa Rental Motor Dashboard Preview">
+              <img src="assets/images/ridenusa_1.webp" alt="RideNusa Rental Motor Dashboard Preview">
             </div>
             <div class="card-body">
               <div class="project-meta">
                 <span>Web Application</span>
-                <span>•</span>
+                <span>&bull;</span>
                 <span>Laravel Framework</span>
               </div>
               <h3 class="card-title">RideNusa: Rental Motor</h3>
               <p class="card-text">
-                Platform sewa motor berbasis web yang menggunakan framework Laravel. Mendukung pencarian ketersediaan unit motor secara real-time, autentikasi pelanggan, dan pelacakan transaksi sewa secara terpusat.
+                A web-based motorcycle rental platform built with Laravel. It supports real-time unit availability search, customer authentication, and centralized rental transaction tracking.
               </p>
             </div>
             <div class="card-footer">
@@ -390,19 +398,19 @@
           </article>
 
           <!-- Project 2 -->
-          <article class="card">
+          <article class="card reveal stagger-2" data-page="1">
             <div class="card-preview">
-              <img src="assets/images/hello_world.png" style="object-position: center 25%;" alt="GoGreen Hello World Reforestation Web Preview">
+              <img src="assets/images/hello_world.webp" alt="GoGreen Hello World Reforestation Web Preview">
             </div>
             <div class="card-body">
               <div class="project-meta">
                 <span>Frontend / Web</span>
-                <span>•</span>
+                <span>&bull;</span>
                 <span>Greening Project</span>
               </div>
               <h3 class="card-title">Hello World</h3>
               <p class="card-text">
-                Projek web interaktif "Hello World" bertema penghijauan yang mengedukasi masyarakat tentang pentingnya reboisasi, pemeliharaan lingkungan, dan pengurangan jejak karbon secara global.
+                An interactive "Hello World" web project with a greening theme that educates people about reforestation, environmental care, and global carbon footprint reduction.
               </p>
             </div>
             <div class="card-footer">
@@ -419,22 +427,134 @@
               </div>
             </div>
           </article>
+
+          <!-- Project 3 -->
+          <article class="card reveal stagger-3" data-page="1">
+            <div class="card-preview">
+              <img src="assets/images/mobile.jpg" alt="Ridenusa Mobile App Preview">
+            </div>
+            <div class="card-body">
+              <div class="project-meta">
+                <span>Mobile</span>
+                <span>&bull;</span>
+                <span>Flutter</span>
+              </div>
+              <h3 class="card-title">Ridenusa: Rental Motor (Mobile)</h3>
+              <p class="card-text">
+                A cross-platform mobile motorcycle rental application built using Flutter. It provides users with instant vehicle browsing, booking management, and real-time reservation.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+                <span class="tag">REST API</span>
+              </div>
+              <div class="card-arrow-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="card reveal stagger-4" data-page="1">
+            <div class="card-preview">
+              <img src="assets/images/KRS_Touhou.png" alt="KRS Universitas Touhou Indonesia Preview">
+            </div>
+            <div class="card-body">
+              <div class="project-meta">
+                <span>Web Application</span>
+                <span>&bull;</span>
+                <span>Next.js & PHP</span>
+              </div>
+              <h3 class="card-title">KRS Universitas Touhou Indonesia</h3>
+              <p class="card-text">
+                A comprehensive course registration system (KRS) for Universitas Touhou Indonesia. Built with a Next.js 14 frontend and a raw PHP 8.0 backend using PDO and MySQL, offering students a seamless study plan management portal.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">PHP</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <div class="card-arrow-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="card reveal stagger-1 coming-soon-card" data-page="2">
+            <div class="card-preview placeholder-preview">
+              <div class="empty-project-visual">
+                <span>⚙️</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="project-meta">
+                <span>Upcoming Project</span>
+                <span>&bull;</span>
+                <span>Planning Phase</span>
+              </div>
+              <h3 class="card-title">Project 5</h3>
+              <p class="card-text">
+                Details about this project will be updated soon. Stay tuned!
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tags">
+                <span class="tag">TBD</span>
+              </div>
+              <div class="card-arrow-btn" aria-hidden="true" style="opacity: 0.3; cursor: not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
         </div> <!-- end card-grid -->
+
+        <!-- Projects Pagination -->
+        <div class="projects-pagination">
+          <button class="pagination-btn prev-btn" aria-label="Previous Page" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="pagination-btn page-num active" data-target-page="1">1</button>
+          <button class="pagination-btn page-num" data-target-page="2">2</button>
+          <button class="pagination-btn next-btn" aria-label="Next Page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
       </div> <!-- end container -->
     </section> <!-- end projects -->
 
 
-    <!-- CONTACT SECTION (KONTAK) -->
+    <!-- CONTACT SECTION -->
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
-        <span class="section-label">Contact / Kontak</span>
-        <h2 id="contact-title">Let's Collaborate</h2>
+        <span class="section-label reveal">Contact</span>
+        <h2 id="contact-title" class="reveal">Let's Collaborate</h2>
         
         <div class="contact-grid">
           <!-- Info Details -->
-          <div class="contact-info">
+          <div class="contact-info reveal-left">
             <p class="lead">
-              Ada ide projek yang ingin didiskusikan atau memiliki pertanyaan terkait Software & Web Development? Silakan kirimkan pesan melalui formulir kontak atau hubungi saya langsung.
+              Have a project idea to discuss or a question about software and web development? Send a message through the contact form or reach out directly.
             </p>
             
             <div class="contact-details">
@@ -476,7 +596,7 @@
                 </div>
                 <div>
                   <span class="contact-label">Instagram</span>
-                  <a href="https://instagram.com/chromatics.id" target="_blank" rel="noopener noreferrer" class="contact-value">@chromatics</a>
+                  <a href="https://instagram.com/chromathics" target="_blank" rel="noopener noreferrer" class="contact-value">@chromathics</a>
                 </div>
               </div>
 
@@ -489,7 +609,7 @@
                   </svg>
                 </div>
                 <div>
-                  <span class="contact-label">Location / Lokasi</span>
+                  <span class="contact-label">Location</span>
                   <span class="contact-value">Indonesia</span>
                 </div>
               </div>
@@ -513,19 +633,19 @@
           </div>
 
           <!-- Contact Form Container -->
-          <div class="contact-form-container">
+          <div class="contact-form-container reveal-right">
             <form id="contact-form" novalidate>
               <div class="form-group">
-                <label for="form-name" class="form-label">Nama Lengkap / Full Name</label>
-                <input type="text" id="form-name" class="form-control" placeholder="Nama Anda" required>
+                <label for="form-name" class="form-label">Full Name</label>
+                <input type="text" id="form-name" class="form-control" placeholder="Your name" required>
               </div>
               <div class="form-group">
-                <label for="form-email" class="form-label">Alamat Email / Email Address</label>
-                <input type="email" id="form-email" class="form-control" placeholder="email@contoh.com" required>
+                <label for="form-email" class="form-label">Email Address</label>
+                <input type="email" id="form-email" class="form-control" placeholder="email@example.com" required>
               </div>
               <div class="form-group">
-                <label for="form-message" class="form-label">Pesan / Message</label>
-                <textarea id="form-message" class="form-control" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                <label for="form-message" class="form-label">Message</label>
+                <textarea id="form-message" class="form-control" placeholder="Write your message here..." required></textarea>
               </div>
               <button type="submit" class="btn btn-submit">
                 Send Message
@@ -541,111 +661,7 @@
     </section>
   </main>
 
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Col 1: Brand/Logo info -->
-        <div class="footer-col brand-col">
-          <span class="footer-brand-title">SASTRAWAN WIKA</span>
-          <span class="footer-brand-sub">IT Developer</span>
-        </div>
-
-        <!-- Col 2: Navigations -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Navigations</h4>
-          <ul class="footer-list">
-            <li>
-              <a href="#home" class="footer-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                </svg>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" class="footer-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#projects" class="footer-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon">
-                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                </svg>
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="#contact" class="footer-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Social Media -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Social Media</h4>
-          <ul class="footer-list">
-            <li>
-              <a href="https://github.com/BaconHairBoi123" target="_blank" rel="noopener noreferrer" class="footer-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://instagram.com/chromatics.id" target="_blank" rel="noopener noreferrer" class="footer-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Address -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Address</h4>
-          <p class="footer-address-text">Indonesia</p>
-          <p class="footer-address-text">
-            <a href="mailto:sastrawanwika@gmail.com" class="footer-mail-link">sastrawanwika@gmail.com</a>
-          </p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-text">&copy; 2026 Wika as Developer. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+  
 
   <!-- Submission Success Modal Overlay -->
   <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -655,19 +671,48 @@
           <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
       </div>
-      <h3 class="modal-title" id="modal-title">Pesan Terkirim!</h3>
+      <h3 class="modal-title" id="modal-title">Message Sent!</h3>
       <p class="modal-desc">
-        Terima kasih telah menghubungi saya. Pesan Anda telah disimulasikan dan berhasil diterima. Saya akan segera merespons via email.
+        Thank you for reaching out. Your message has been simulated and received successfully. I will respond by email soon.
       </p>
-      <button class="btn btn-primary" id="modal-close" style="width: 100%;">Tutup</button>
+      <button class="btn btn-primary" id="modal-close" style="width: 100%;">Close</button>
     </div>
   </div>
 
   <!-- Custom Tracking Cursor Elements -->
+  <div class="rocket-scroll-indicator" id="rocket-scroll-indicator" aria-hidden="true">
+    <div class="rocket-scroll-track">
+      <div class="rocket-scroll-fill"></div>
+    </div>
+    <div class="rocket-scroll-ship">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 2C9.2 4.1 7.7 7 7.5 10.4L4.6 13.3c-.4.4-.6.9-.5 1.5l.5 3.2 3.2-1.7c.7.7 1.5 1.3 2.2 1.7l-1.7 3.2 3.2.5c.6.1 1.1-.1 1.5-.5l2.9-2.9C19.1 18 22 16.5 24 13.7 20.9 13.5 18 14 15.5 15.2 16.7 12.7 17.2 9.8 17 6.7 14.2 6.5 11.3 7 8.8 8.2 10 5.8 11.2 3.8 12 2Z" fill="currentColor"/>
+        <circle cx="13.4" cy="9.2" r="1.7" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
   <div class="cursor-dot" id="cursor-dot"></div>
   <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Floating Ambient Audio Toggle -->
+  <button class="audio-toggle-btn" id="audio-toggle" aria-label="Toggle Ambient Space Audio">
+    <svg class="audio-icon audio-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="audio-icon-muted">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+    <svg class="audio-icon audio-playing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="audio-icon-playing" style="display: none;">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
+  </button>
+  
+  <audio id="ambient-audio" loop preload="auto">
+    <source src="assets/audio/Interstellar.mp3" type="audio/mpeg">
+  </audio>
 
   <!-- JavaScript Behavior -->
   <script src="script.js"></script>
 </body>
 </html>
+

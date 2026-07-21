@@ -8,8 +8,8 @@ lokal, melakukan deployment ke GitHub Pages, serta melakukan pembaruan (update).
 ------------------------------------------------------------------------
 1. CARA MENJALANKAN WEBSITE SECARA LOKAL
 ------------------------------------------------------------------------
-Website ini adalah website statis murni (HTML, CSS, JS), sehingga Anda tidak 
-memerlukan database atau web server khusus (seperti Apache/Nginx) untuk membukanya.
+Website ini adalah website statis (HTML, CSS, JS), sehingga Anda tidak 
+memerlukan database eksternal khusus untuk membukanya secara lokal.
 
 Cara Tercepat:
 1. Ekstrak seluruh file proyek ke folder komputer Anda.
@@ -17,13 +17,13 @@ Cara Tercepat:
    (Google Chrome, Microsoft Edge, Firefox, Safari).
 
 Menggunakan Web Server Lokal (Alternatif Opsional):
-Jika Anda ingin menyajikan via server lokal, jalankan perintah berikut dari folder proyek:
+Jika Anda ingin menyajikan via server lokal untuk simulasi production:
 - Menggunakan Node/npm (instal http-server):
   npm install -g http-server
-  http-server
+  http-server -p 8080
 - Menggunakan Python:
-  python -m http.server 8000
-- Akses website melalui URL 'http://localhost:8080' atau 'http://localhost:8000'.
+  python -m http.server 8080
+- Akses website melalui URL 'http://localhost:8080'.
 
 ------------------------------------------------------------------------
 2. PANDUAN DEPLOYMENT KE GITHUB PAGES
@@ -40,9 +40,9 @@ Langkah A: Inisialisasi Repository Lokal
 
 Langkah B: Hubungkan dengan GitHub Repository
 1. Masuk ke akun GitHub Anda (https://github.com).
-2. Buat repository publik baru dengan nama bebas (contoh: 'portfolio-uas').
+2. Buat repository publik baru dengan nama bebas (contoh: 'UAS_CloudComputing.github.io').
    *Catatan: Jangan mencentang opsi "Initialize this repository with a README".*
-3. Salin URL remote repository Anda (contoh: https://github.com/username/portfolio-uas.git).
+3. Salin URL remote repository Anda (contoh: https://github.com/BaconHairBoi123/UAS_CloudComputing.github.io.git).
 4. Jalankan perintah di Terminal lokal Anda untuk mendaftarkan remote:
    git remote add origin <URL_REMOTE_GITHUB_ANDA>
 5. Push file dari lokal ke GitHub:
@@ -52,24 +52,21 @@ Langkah B: Hubungkan dengan GitHub Repository
 Langkah C: Aktifkan GitHub Pages
 1. Buka repository Anda di website GitHub.
 2. Masuk ke tab "Settings" (Pengaturan) di bagian kanan atas.
-3. Cari menu "Pages" di bilah navigasi sebelah kiri (di bawah sub-menu Code and Automation).
+3. Cari menu "Pages" di bilah navigasi sebelah kiri.
 4. Pada bagian "Build and deployment" -> "Source", pilih "Deploy from a branch".
-5. Pada bagian "Branch", ubah None menjadi 'main' (atau branch utama Anda), lalu biarkan 
-   folder dalam keadaan '/ (root)', klik tombol "Save".
+5. Pada bagian "Branch", ubah None menjadi 'main', lalu klik "Save".
 6. Tunggu 1-2 menit. Refresh halaman Settings Pages. Anda akan melihat URL publik Anda 
-   di bagian atas (contoh: https://username.github.io/portfolio-uas/).
+   di bagian atas (contoh: https://baconhairboi123.github.io/UAS_CloudComputing.github.io/).
 
 ------------------------------------------------------------------------
-3. PANDUAN MELAKUKAN PEMBARUAN (UPDATE) WEBSITE
+3. PANDUAN MELAKUKAN PEMBARUAN (UPDATE) / CONTINUOUS DEPLOYMENT
 ------------------------------------------------------------------------
-Untuk membuktikan Continuous Deployment (syarat soal 1.c):
-1. Lakukan pengeditan kecil pada file 'index.html' (misal: mengubah teks nama, deskripsi, 
-   atau menambah tag keahlian/skills baru).
-2. Simpan file.
+Untuk membuktikan Continuous Deployment (CD):
+1. Lakukan perubahan pada proyek (misalnya: penambahan kartu projek ke-5 Coming Soon beserta sistem paginasi dinamis '< 1 2 >').
+2. Simpan semua file yang diedit (index.html, style.css, script.js).
 3. Commit dan push kembali perubahan tersebut ke GitHub:
    git add .
-   git commit -m "Update: menambah detail proyek/skills"
+   git commit -m "Update: menambahkan projek ke-5 coming soon dan sistem paginasi projek"
    git push origin main
-4. GitHub Pages akan otomatis melakukan build ulang dalam beberapa detik.
-5. Akses kembali URL publik Anda untuk memastikan pembaruan telah tampil secara live.
+4. GitHub Actions / Pages akan otomatis mendeteksi perubahan ini, melakukan build ulang dalam beberapa detik, dan memperbarui website publik secara live.
 ========================================================================
