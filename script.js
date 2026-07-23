@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Attach hover states for all clickable elements
   const updateClickablesHover = () => {
-    const clickables = document.querySelectorAll('a, button, .card, .social-btn, input, textarea, select');
+    const clickables = document.querySelectorAll('a, button, .card, .social-btn, input, textarea, select, .skill-card, .about-badge, .pillar-card, .stat-box, .about-decor-orbit');
     clickables.forEach(el => {
       // Prevent attaching duplicate listeners if re-ran
       el.removeEventListener('mouseenter', onMouseEnter);
@@ -218,11 +218,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateClickablesHover();
 
-  document.querySelectorAll('.btn, .social-btn, .card-arrow-btn').forEach(button => {
-    button.addEventListener('click', (e) => {
-      createMeteorBurst(e.clientX, e.clientY);
+  // Attach meteor burst sparks effect on click for interactive elements
+  const attachMeteorBurstClicks = () => {
+    const burstTargets = document.querySelectorAll(
+      '.btn, .social-btn, .card-arrow-btn, .skill-card, .about-decor-orbit, .about-badge, .pillar-card, .stat-box, .pagination-btn'
+    );
+    burstTargets.forEach(el => {
+      el.removeEventListener('click', handleBurstClick);
+      el.addEventListener('click', handleBurstClick);
     });
-  });
+  };
+
+  function handleBurstClick(e) {
+    createMeteorBurst(e.clientX, e.clientY);
+
+    // If Cosmic Orbit system is clicked, trigger Time Warp speed boost for 3 seconds
+    const orbitDecor = e.target.closest('.about-decor-orbit');
+    if (orbitDecor) {
+      orbitDecor.classList.add('orbit-time-warp');
+      if (orbitDecor._warpTimeout) clearTimeout(orbitDecor._warpTimeout);
+      orbitDecor._warpTimeout = setTimeout(() => {
+        orbitDecor.classList.remove('orbit-time-warp');
+      }, 3000);
+    }
+  }
+
+  attachMeteorBurstClicks();
 
   // === CARD MOUSE-SPOTLIGHT EFFECT ===
   const updateCardSpotlight = () => {
@@ -479,40 +500,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const viewportHeight = window.innerHeight;
     const viewportBottom = scrollTop + viewportHeight;
 
-    const projectsSec = document.getElementById('projects');
-    if (projectsSec) {
-      const projectsTop = projectsSec.offsetTop;
-      const projectsBottom = projectsTop + projectsSec.offsetHeight;
+    const currentIdx = getSnapIdx();
+    const currentSec = snapSections[currentIdx];
 
-      // Check if viewport is within the projects section boundaries
-      // We add a tiny buffer (15px) to prevent subpixel issues
-      const isInsideProjects = (scrollTop >= projectsTop - 15 && scrollTop <= projectsBottom - viewportHeight + 15);
-      
-      if (isInsideProjects) {
-        if (e.deltaY > 0) {
-          // Scrolling down: only snap to next if we've reached the bottom of projects
-          if (viewportBottom >= projectsBottom - 15) {
-            e.preventDefault();
-            if (snapAnimating) return;
-            snapCurrentIdx = getSnapIdx();
-            snapGoTo(1);
-          } else {
-            // Let native scroll scroll down inside projects
-            return;
+    if (currentSec) {
+      const secTop = currentSec.offsetTop;
+      const secHeight = currentSec.offsetHeight;
+      const secBottom = secTop + secHeight;
+
+      // If the section is taller than viewport (e.g. About or Projects), allow native internal scrolling
+      if (secHeight > viewportHeight + 40) {
+        const isInsideSec = (scrollTop >= secTop - 25 && scrollTop <= secBottom - viewportHeight + 25);
+        if (isInsideSec) {
+          if (e.deltaY > 0) {
+            // Scrolling down: only snap to next section if reached bottom of current section
+            if (viewportBottom >= secBottom - 25) {
+              e.preventDefault();
+              if (snapAnimating) return;
+              snapCurrentIdx = currentIdx;
+              snapGoTo(1);
+            } else {
+              return; // Allow native scroll inside section
+            }
+          } else if (e.deltaY < 0) {
+            // Scrolling up: only snap to prev section if reached top of current section
+            if (scrollTop <= secTop + 25) {
+              e.preventDefault();
+              if (snapAnimating) return;
+              snapCurrentIdx = currentIdx;
+              snapGoTo(-1);
+            } else {
+              return; // Allow native scroll inside section
+            }
           }
-        } else if (e.deltaY < 0) {
-          // Scrolling up: only snap to prev if we've reached the top of projects
-          if (scrollTop <= projectsTop + 15) {
-            e.preventDefault();
-            if (snapAnimating) return;
-            snapCurrentIdx = getSnapIdx();
-            snapGoTo(-1);
-          } else {
-            // Let native scroll scroll up inside projects
-            return;
-          }
+          return;
         }
-        return;
       }
     }
 
@@ -537,28 +559,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const viewportHeight = window.innerHeight;
     const viewportBottom = scrollTop + viewportHeight;
 
-    const projectsSec = document.getElementById('projects');
-    if (projectsSec) {
-      const projectsTop = projectsSec.offsetTop;
-      const projectsBottom = projectsTop + projectsSec.offsetHeight;
-      const isInsideProjects = (scrollTop >= projectsTop - 15 && scrollTop <= projectsBottom - viewportHeight + 15);
+    const currentIdx = getSnapIdx();
+    const currentSec = snapSections[currentIdx];
 
-      if (isInsideProjects) {
-        if (delta > 0) {
-          // Swipe up (scrolls down): only snap if we've reached the bottom
-          if (viewportBottom < projectsBottom - 20) {
-            return; // Let native swipe scroll down inside projects
-          }
-        } else {
-          // Swipe down (scrolls up): only snap if we've reached the top
-          if (scrollTop > projectsTop + 20) {
-            return; // Let native swipe scroll up inside projects
+    if (currentSec) {
+      const secTop = currentSec.offsetTop;
+      const secHeight = currentSec.offsetHeight;
+      const secBottom = secTop + secHeight;
+
+      if (secHeight > viewportHeight + 40) {
+        const isInsideSec = (scrollTop >= secTop - 25 && scrollTop <= secBottom - viewportHeight + 25);
+        if (isInsideSec) {
+          if (delta > 0) {
+            // Swipe up (scrolls down): only snap if reached bottom
+            if (viewportBottom < secBottom - 25) {
+              return; // Allow native swipe scroll down inside section
+            }
+          } else {
+            // Swipe down (scrolls up): only snap if reached top
+            if (scrollTop > secTop + 25) {
+              return; // Allow native swipe scroll up inside section
+            }
           }
         }
       }
     }
 
-    snapCurrentIdx = getSnapIdx();
+    snapCurrentIdx = currentIdx;
     if (delta > 0) snapGoTo(1);
     else if (delta < 0) snapGoTo(-1);
   }, { passive: true });
@@ -683,9 +710,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (logoClicks >= 3) {
         logoClicks = 0;
-        clearTimeout(clickTimeout); // Cancel any pending interactions
-        triggerBlackHole();
+        clearTimeout(clickTimeout); // Cancel any pending interaction timer
+        triggerBlackHole(); // Click 3: Gargantua Black Hole Implosion (Instant!)
       } else {
+        // Snappy 380ms time window — fast responsive supernova trigger while keeping triple click intact
         clickTimeout = setTimeout(() => {
           if (logoClicks === 1) {
             // Click 1: Spin logo + launch rocket
@@ -706,7 +734,7 @@ document.addEventListener('DOMContentLoaded', () => {
             triggerLogoSupernovaWarp();
           }
           logoClicks = 0;
-        }, 350); // 350ms window — enough time to register double/triple click
+        }, 380); // 380ms snappy window
       }
     });
 
@@ -1051,69 +1079,110 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // === PROJECTS PAGINATION ===
-  const projectCards = document.querySelectorAll('.card-grid .card');
-  const paginationBtns = document.querySelectorAll('.projects-pagination .page-num');
-  const prevPageBtn = document.querySelector('.projects-pagination .prev-btn');
-  const nextPageBtn = document.querySelector('.projects-pagination .next-btn');
-  let currentProjectPage = 1;
-  const totalProjectPages = 2;
+  // === DYNAMIC PROJECTS PAGINATION ===
+  const setupProjectsPagination = () => {
+    const projectCards = document.querySelectorAll('.card-grid .card');
+    const paginationContainer = document.querySelector('.projects-pagination');
+    if (!paginationContainer || !projectCards.length) return;
 
-  const showProjectPage = (page) => {
-    currentProjectPage = page;
-    
-    // Toggle active state for page numbers
-    paginationBtns.forEach(btn => {
-      const btnPage = parseInt(btn.getAttribute('data-target-page'));
-      if (btnPage === page) {
-        btn.classList.add('active');
+    // Max 4 projects per page
+    const CARDS_PER_PAGE = 4;
+    const totalPages = Math.max(1, Math.ceil(projectCards.length / CARDS_PER_PAGE));
+
+    // Dynamically assign page number attribute to each card based on index
+    projectCards.forEach((card, index) => {
+      const pageNum = Math.floor(index / CARDS_PER_PAGE) + 1;
+      card.setAttribute('data-page', pageNum);
+    });
+
+    const prevBtn = paginationContainer.querySelector('.prev-btn');
+    const nextBtn = paginationContainer.querySelector('.next-btn');
+
+    // Remove existing page-num buttons to rebuild dynamically
+    paginationContainer.querySelectorAll('.page-num').forEach(btn => btn.remove());
+
+    // Dynamically create page number buttons
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement('button');
+      btn.className = `pagination-btn page-num ${i === 1 ? 'active' : ''}`;
+      btn.setAttribute('data-target-page', i);
+      btn.textContent = i;
+
+      if (nextBtn) {
+        paginationContainer.insertBefore(btn, nextBtn);
       } else {
-        btn.classList.remove('active');
+        paginationContainer.appendChild(btn);
+      }
+    }
+
+    let currentProjectPage = 1;
+
+    const showProjectPage = (page, shouldScroll = true) => {
+      currentProjectPage = page;
+
+      // Update active class on page buttons
+      const allPageBtns = paginationContainer.querySelectorAll('.page-num');
+      allPageBtns.forEach(btn => {
+        const btnPage = parseInt(btn.getAttribute('data-target-page'));
+        btn.classList.toggle('active', btnPage === page);
+      });
+
+      // Update disabled state on prev (<) and next (>) arrow buttons
+      if (prevBtn) prevBtn.disabled = (page === 1);
+      if (nextBtn) nextBtn.disabled = (page === totalPages);
+
+      // Show cards belonging to current page, hide others
+      projectCards.forEach(card => {
+        const cardPage = parseInt(card.getAttribute('data-page')) || 1;
+        if (cardPage === page) {
+          card.style.display = 'flex';
+          card.classList.add('is-visible');
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Smooth scroll to top of projects section when switching pages
+      if (shouldScroll) {
+        const projectsSec = document.getElementById('projects');
+        if (projectsSec) {
+          const targetScroll = getSectionScrollTarget(projectsSec);
+          window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+          if (typeof snapSections !== 'undefined') {
+            const projIdx = snapSections.findIndex(sec => sec.id === 'projects');
+            if (projIdx !== -1) snapCurrentIdx = projIdx;
+          }
+        }
+      }
+    };
+
+    // Event delegation for all pagination button clicks
+    paginationContainer.addEventListener('click', (e) => {
+      const pageBtn = e.target.closest('.page-num');
+      if (pageBtn) {
+        const page = parseInt(pageBtn.getAttribute('data-target-page'));
+        showProjectPage(page);
+        return;
+      }
+
+      const pBtn = e.target.closest('.prev-btn');
+      if (pBtn && currentProjectPage > 1) {
+        showProjectPage(currentProjectPage - 1);
+        return;
+      }
+
+      const nBtn = e.target.closest('.next-btn');
+      if (nBtn && currentProjectPage < totalPages) {
+        showProjectPage(currentProjectPage + 1);
+        return;
       }
     });
 
-    // Toggle disabled state for arrow buttons
-    if (prevPageBtn) prevPageBtn.disabled = page === 1;
-    if (nextPageBtn) nextPageBtn.disabled = page === totalProjectPages;
-
-    // Show/Hide cards with immediate reveal visibility
-    projectCards.forEach(card => {
-      const cardPage = parseInt(card.getAttribute('data-page')) || 1;
-      if (cardPage === page) {
-        card.style.display = 'flex';
-        card.classList.add('is-visible');
-      } else {
-        card.style.display = 'none';
-      }
-    });
+    // Initialize page 1 without auto-scroll
+    showProjectPage(1, false);
   };
 
-  // Add click listeners to page numbers
-  paginationBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const page = parseInt(btn.getAttribute('data-target-page'));
-      showProjectPage(page);
-    });
-  });
-
-  // Add click listeners to arrow buttons
-  if (prevPageBtn) {
-    prevPageBtn.addEventListener('click', () => {
-      if (currentProjectPage > 1) {
-        showProjectPage(currentProjectPage - 1);
-      }
-    });
-  }
-  if (nextPageBtn) {
-    nextPageBtn.addEventListener('click', () => {
-      if (currentProjectPage < totalProjectPages) {
-        showProjectPage(currentProjectPage + 1);
-      }
-    });
-  }
-
-  // Initialize page 1
-  showProjectPage(1);
+  setupProjectsPagination();
 
   function triggerLogoRocketOrbit() {
     // 1. Spin the logo
@@ -1147,11 +1216,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function triggerLogoSupernovaWarp() {
-    // 1. Flash the logo
-    logoLink.classList.add('supernova-flash');
-    setTimeout(() => logoLink.classList.remove('supernova-flash'), 1200);
+    if (!logoLink) return;
 
-    // 2. Hyperspace Warp on background stars
+    // 1. Flash the logo with Supernova animation
+    logoLink.classList.add('supernova-flash');
+    setTimeout(() => logoLink.classList.remove('supernova-flash'), 1400);
+
+    // 2. Burst of star meteors from logo position
+    const rect = logoLink.getBoundingClientRect();
+    createMeteorBurst(rect.left + rect.width / 2, rect.top + rect.height / 2);
+
+    // 3. Hyperspace Warp on background stars (High Contrast & Crystal Clear)
     const starsWrapper = document.querySelector('.stars-wrapper');
     if (starsWrapper) {
       starsWrapper.classList.add('warp-active');
@@ -1160,7 +1235,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         starsWrapper.classList.remove('warp-active');
         document.body.classList.remove('warp-body');
-      }, 2200);
+      }, 2500);
     }
   }
 });

@@ -1,6 +1,7 @@
 ========================================================================
 PETUNJUK PENGGUNAAN DAN DEPLOYMENT - WEBSITE PORTFOLIO WIKA
 ========================================================================
+URL Live Website: https://baconhairboi123.github.io/UAS_CloudComputing.github.io/
 
 Dokumen ini berisi panduan untuk menjalankan website portfolio ini secara
 lokal, melakukan deployment ke GitHub Pages, serta melakukan pembaruan (update).
@@ -8,8 +9,8 @@ lokal, melakukan deployment ke GitHub Pages, serta melakukan pembaruan (update).
 ------------------------------------------------------------------------
 1. CARA MENJALANKAN WEBSITE SECARA LOKAL
 ------------------------------------------------------------------------
-Website ini adalah website statis (HTML, CSS, JS), sehingga Anda tidak 
-memerlukan database eksternal khusus untuk membukanya secara lokal.
+Website ini adalah website statis interaktif (HTML5, CSS3, JavaScript ES6+),
+sehingga Anda tidak memerlukan database eksternal khusus untuk membukanya.
 
 Cara Tercepat:
 1. Ekstrak seluruh file proyek ke folder komputer Anda.
@@ -26,7 +27,20 @@ Jika Anda ingin menyajikan via server lokal untuk simulasi production:
 - Akses website melalui URL 'http://localhost:8080'.
 
 ------------------------------------------------------------------------
-2. PANDUAN DEPLOYMENT KE GITHUB PAGES
+2. FITUR DOKUMENTASI INTERAKTIF WEBSITE
+------------------------------------------------------------------------
+- Interaktivitas Logo 'wika.dev':
+  * 1x Klik: Memutar logo dan meluncurkan Roket Luar Angkasa 🚀.
+  * 2x Klik (jeda 380ms): Kilatan ledakan Supernova & Kecepatan Cahaya Warp Speed ✨.
+  * 3x Klik (instan): Pemicuan Gargantua Black Hole Implosion 🕳️ yang menyedot elemen-elemen web.
+- Ambient Space Audio & Web Audio Synth Fallback:
+  * Klik tombol audio di kiri bawah untuk memutar musik luar angkasa atau synth fallback.
+- Paginasi Dinamis Projek:
+  * Navigasi angka '< 1 2 >' pada bagian Projek Unggulan berpindah antara Halaman 1 (Projek 1-4) 
+    dan Halaman 2 (Projek 5 Coming Soon).
+
+------------------------------------------------------------------------
+3. PANDUAN DEPLOYMENT KE GITHUB PAGES (CLOUD)
 ------------------------------------------------------------------------
 Untuk memenuhi syarat ujian (UAS Cloud Computing), ikuti langkah berikut:
 
@@ -40,29 +54,29 @@ Langkah A: Inisialisasi Repository Lokal
 
 Langkah B: Hubungkan dengan GitHub Repository
 1. Masuk ke akun GitHub Anda (https://github.com).
-2. Buat repository publik baru dengan nama bebas (contoh: 'UAS_CloudComputing.github.io').
-   *Catatan: Jangan mencentang opsi "Initialize this repository with a README".*
-3. Salin URL remote repository Anda (contoh: https://github.com/BaconHairBoi123/UAS_CloudComputing.github.io.git).
+2. Buat repository publik baru dengan nama 'UAS_CloudComputing.github.io'.
+3. Salin URL remote repository Anda:
+   https://github.com/BaconHairBoi123/UAS_CloudComputing.github.io.git
 4. Jalankan perintah di Terminal lokal Anda untuk mendaftarkan remote:
-   git remote add origin <URL_REMOTE_GITHUB_ANDA>
+   git remote add origin https://github.com/BaconHairBoi123/UAS_CloudComputing.github.io.git
 5. Push file dari lokal ke GitHub:
    git branch -M main
    git push -u origin main
 
 Langkah C: Aktifkan GitHub Pages
 1. Buka repository Anda di website GitHub.
-2. Masuk ke tab "Settings" (Pengaturan) di bagian kanan atas.
+2. Masuk ke tab "Settings" di bagian kanan atas.
 3. Cari menu "Pages" di bilah navigasi sebelah kiri.
 4. Pada bagian "Build and deployment" -> "Source", pilih "Deploy from a branch".
 5. Pada bagian "Branch", ubah None menjadi 'main', lalu klik "Save".
-6. Tunggu 1-2 menit. Refresh halaman Settings Pages. Anda akan melihat URL publik Anda 
-   di bagian atas (contoh: https://baconhairboi123.github.io/UAS_CloudComputing.github.io/).
+6. Tunggu 1-2 menit. Refresh halaman Settings Pages. URL publik Anda akan aktif di:
+   https://baconhairboi123.github.io/UAS_CloudComputing.github.io/
 
 ------------------------------------------------------------------------
-3. PANDUAN MELAKUKAN PEMBARUAN (UPDATE) / CONTINUOUS DEPLOYMENT
+4. PANDUAN MELAKUKAN PEMBARUAN (UPDATE) / CONTINUOUS DEPLOYMENT (CD)
 ------------------------------------------------------------------------
 Untuk membuktikan Continuous Deployment (CD):
-1. Lakukan perubahan pada proyek (misalnya: penambahan kartu projek ke-5 Coming Soon beserta sistem paginasi dinamis '< 1 2 >').
+1. Lakukan perubahan pada proyek (misalnya: penambahan kartu projek ke-5 Coming Soon dan paginasi dinamis).
 2. Simpan semua file yang diedit (index.html, style.css, script.js).
 3. Commit dan push kembali perubahan tersebut ke GitHub:
    git add .
