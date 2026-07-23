@@ -1,5 +1,5 @@
 ========================================================================
-PETUNJUK PENGGUNAAN DAN DEPLOYMENT - WEBSITE PORTFOLIO WIKA
+PETUNJUK PENGGUNAAN DAN DEPLOYMENT - WEBSITE PORTFOLIO
 ========================================================================
 URL Live Website: https://baconhairboi123.github.io/UAS_CloudComputing.github.io/
 
